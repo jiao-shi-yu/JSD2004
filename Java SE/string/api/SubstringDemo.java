@@ -1,4 +1,4 @@
-package string;
+package string.api;
 
 public class SubstringDemo {
 	public static void main(String[] args) {

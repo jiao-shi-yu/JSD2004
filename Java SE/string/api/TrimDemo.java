@@ -1,4 +1,4 @@
-package string;
+package string.api;
 
 public class TrimDemo {
 	public static void main(String[] args) {

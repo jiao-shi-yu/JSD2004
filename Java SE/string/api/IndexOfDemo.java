@@ -1,4 +1,4 @@
-package string;
+package string.api;
 
 public class IndexOfDemo {
 	public static void main(String[] args) {
