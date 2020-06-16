@@ -1,6 +1,6 @@
 package demo;
 
-public class Demo06 {
+public class MaskCodeDemo {
 	public static void main(String[] args) {
 		int n = 0x67f415ea;
 		int m = 0xff;

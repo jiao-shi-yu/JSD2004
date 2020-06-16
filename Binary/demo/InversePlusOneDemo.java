@@ -1,6 +1,6 @@
 package demo;
 
-public class Demo05 {
+public class InversePlusOneDemo {
 	public static void main(String[] args) {
 		/**
 		 * ÑéÖ¤²¹Âë»¥²¹¶Ô³Æ

@@ -1,6 +1,6 @@
 package demo;
 
-public class Demo02 {
+public class LiteralsDemo {
 	public static void main(String[] args) {
 		// Java 7 开始支持2进制直接量 0b
 		int n = 0b110010;

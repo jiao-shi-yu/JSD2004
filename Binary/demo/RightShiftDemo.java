@@ -1,6 +1,6 @@
 package demo;
 
-public class Demo07 {
+public class RightShiftDemo {
 	public static void main(String[] args) {
 		/**
 		 * 将一个int拆分为4个byte

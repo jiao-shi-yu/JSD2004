@@ -1,6 +1,6 @@
 package demo;
 
-public class Demo03 {
+public class MAXMINVALUEDemo {
 	public static void main(String[] args) {
 		// 补码的最大值
 		int max = Integer.MAX_VALUE;
