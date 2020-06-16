@@ -1,4 +1,4 @@
-package wrapper;
+package wrapper.number;
 
 public class NumberDemo {
 	public static void main(String[] args) {
