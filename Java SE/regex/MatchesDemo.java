@@ -1,4 +1,4 @@
-package regx;
+package regex;
 
 public class MatchesDemo {
 	public static void main(String[] args) {

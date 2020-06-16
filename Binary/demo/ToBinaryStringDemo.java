@@ -1,6 +1,6 @@
 package demo;
 
-public class Demo01 {
+public class ToBinaryStringDemo {
 	public static void main(String[] args) {
 		int n = 32; // 编译：100 000
 		// n 在内存中是一个2进制的数字 10 0000
