@@ -2,25 +2,25 @@ package demo;
 
 public class LiteralsDemo {
 	public static void main(String[] args) {
-		// Java 7 ¿ªÊ¼Ö§³Ö2½øÖÆÖ±½ÓÁ¿ 0b
+		// Java 7 å¼€å§‹æ”¯æŒ2è¿›åˆ¶ç›´æ¥é‡ 0b
 		int n = 0b110010;
-		System.out.println("Ê®½øÖÆn: " + n);
-		System.out.println("¶ş½øÖÆn£º " + Integer.toBinaryString(n));
+		System.out.println("åè¿›åˆ¶n: " + n);
+		System.out.println("äºŒè¿›åˆ¶nï¼š " + Integer.toBinaryString(n));
 		
 		/**
-		 * ¶ş½øÖÆÊéĞ´Èß³¤Âé·³
+		 * äºŒè¿›åˆ¶ä¹¦å†™å†—é•¿éº»çƒ¦
 		 */
 		n = 0b1010101001010111000;
 		System.out.println(Integer.toBinaryString(n));
 		
 		/**
-		 * int ÊÇ32Î»£¬³¬¹ı32Î»ÒªÓÃlong
+		 * int æ˜¯32ä½ï¼Œè¶…è¿‡32ä½è¦ç”¨long
 		 */
 		long l = 0b0101_0101_0101_0101_0101_0101_0101_0101_0101_0101L;
 		System.out.println(l);
 		
 		/**
-		 * °Ë½øÖÆ×ÖÃæÁ¿ÒÔ0¿ªÍ·
+		 * å…«è¿›åˆ¶å­—é¢é‡ä»¥0å¼€å¤´
 		 */
 		int m = 072;
 		System.out.println(m);

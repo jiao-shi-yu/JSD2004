@@ -3,7 +3,7 @@ package demo;
 public class InversePlusOneDemo {
 	public static void main(String[] args) {
 		/**
-		 * 验证补码互补对称
+		 * 楠岃瘉琛ョ爜浜掕ˉ瀵圭О
 		 * -n = ~n + 1
 		 */
 		int n = 100;
@@ -14,11 +14,11 @@ public class InversePlusOneDemo {
 		m = ~n + 1;
 		System.out.println(m);
 		/** 
-		 * ~ 反码
+		 * ~ 鍙嶇爜
 		 * 
 		 */
-		// min 取反得到 max
-		// 再加一得到自身
+		// min 鍙栧弽寰楀埌 max
+		// 鍐嶅姞涓�寰楀埌鑷韩
 		int min = Integer.MIN_VALUE;
 		System.out.println("min: " + min);
 		System.out.println("max: " + Integer.MAX_VALUE);

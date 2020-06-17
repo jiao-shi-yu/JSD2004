@@ -2,10 +2,10 @@ package demo;
 
 public class ToBinaryStringDemo {
 	public static void main(String[] args) {
-		int n = 32; // ±àÒë£º100 000
-		// n ÔÚÄÚ´æÖĞÊÇÒ»¸ö2½øÖÆµÄÊı×Ö 10 0000
-		System.out.println(n); // 10 0000 ³ÌĞò×ª»»Îª10½øÖÆ×Ö·û´®¡°32¡±¡£
-		// JavaÌá¹©ÁËAPI£¬¿ÉÒÔÏÔÊ¾Îª¶ş½øÖÆµÄ×Ö·û´®
+		int n = 32; // ç¼–è¯‘ï¼š100 000
+		// n åœ¨å†…å­˜ä¸­æ˜¯ä¸€ä¸ª2è¿›åˆ¶çš„æ•°å­— 10 0000
+		System.out.println(n); // 10 0000 ç¨‹åºè½¬æ¢ä¸º10è¿›åˆ¶å­—ç¬¦ä¸²â€œ32â€ã€‚
+		// Javaæä¾›äº†APIï¼Œå¯ä»¥æ˜¾ç¤ºä¸ºäºŒè¿›åˆ¶çš„å­—ç¬¦ä¸²
 		System.out.println(Integer.toBinaryString(n));
 		for (int i = 0; i < 100; i++) {
 			System.out.println(Integer.toBinaryString(i));

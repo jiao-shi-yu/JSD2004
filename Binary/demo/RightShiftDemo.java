@@ -3,7 +3,7 @@ package demo;
 public class RightShiftDemo {
 	public static void main(String[] args) {
 		/**
-		 * ½«Ò»¸öint²ð·ÖÎª4¸öbyte
+		 * å°†ä¸€ä¸ªintæ‹†åˆ†ä¸º4ä¸ªbyte
 		 */
 		int i = 0x79feadc;
 		byte b1 = (byte) ((i >>> 24) & 0xff);

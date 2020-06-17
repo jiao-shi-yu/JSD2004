@@ -2,11 +2,11 @@ package demo;
 
 public class MAXMINVALUEDemo {
 	public static void main(String[] args) {
-		// ²¹ÂëµÄ×î´óÖµ
+		// è¡¥ç çš„æœ€å¤§å€¼
 		int max = Integer.MAX_VALUE;
 		System.out.println(max);
 		System.out.println(Integer.toBinaryString(max));
-		// ²¹ÂëµÄ×îĞ¡Öµ
+		// è¡¥ç çš„æœ€å°å€¼
 		int min = Integer.MIN_VALUE;
 		System.out.println(min);
 		System.out.println(Integer.toBinaryString(min));
@@ -21,14 +21,14 @@ public class MAXMINVALUEDemo {
 		System.out.println(Long.toBinaryString(lmax));
 		
 		/**
-		 * -1 µÄ±àÂë
+		 * -1 çš„ç¼–ç 
 		 */
 		int i = -1;
 		int l = -1;
 		System.out.println(Integer.toBinaryString(i));
 		System.out.println(Long.toBinaryString(l));
 		
-		int k = (int)lmin; // long µÄ×îĞ¡ÖµÊÇ³¬³öÁË int µÄ·¶Î§µÄ
+		int k = (int)lmin; // long çš„æœ€å°å€¼æ˜¯è¶…å‡ºäº† int çš„èŒƒå›´çš„
 		System.out.println("k: " + Integer.toBinaryString(k));
 		
 		
