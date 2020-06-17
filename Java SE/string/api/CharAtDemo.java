@@ -6,11 +6,11 @@ public class CharAtDemo {
 		char c = str.charAt(12);
 		System.out.println(c);
 		/**
-		 * Èç¹ûÖ¸¶¨µÄÏÂ±ê¹ı´ó£¬»á³öÏÖÊı×éÏÂ±êÔ½½çÒì³£
+		 * å¦‚æœæŒ‡å®šçš„ä¸‹æ ‡è¿‡å¤§ï¼Œä¼šå‡ºç°æ•°ç»„ä¸‹æ ‡è¶Šç•Œå¼‚å¸¸
 		 */
 //		c = str.charAt(99);
 		/**
-		 * °¸Àı£ºÍ³¼ÆÒ»ÏÂstrÖĞÓĞ¼¸¸öi×Ö·û£¿
+		 * æ¡ˆä¾‹ï¼šç»Ÿè®¡ä¸€ä¸‹strä¸­æœ‰å‡ ä¸ªiå­—ç¬¦ï¼Ÿ
 		 */
 		int count = 0;
 		for(int i = 0; i < str.length(); i++) {
@@ -18,6 +18,6 @@ public class CharAtDemo {
 				count ++;
 			}
 		}
-		System.out.println(str+"ÖĞÓĞ"+count+"¸öi×Ö·û");
+		System.out.println(str+"ä¸­æœ‰"+count+"ä¸ªiå­—ç¬¦");
 	}
 }

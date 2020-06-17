@@ -1,13 +1,13 @@
 package string.api;
 /**
- * »ñÈ¡µ±Ç°×Ö·û´®µÄ³¤¶È£¨×Ö·û¸öÊı£©
+ * è·å–å½“å‰å­—ç¬¦ä¸²çš„é•¿åº¦ï¼ˆå­—ç¬¦ä¸ªæ•°ï¼‰
  * @author jiao_
  *
  */
 public class LengthDemo {
 	public static void main(String[] args) {
-		String string = "ÎÒ°®Java!";
+		String string = "æˆ‘çˆ±Java!";
 		int len = string.length();
-		System.out.println("len£º" + len);
+		System.out.println("lenï¼š" + len);
 	}
 }

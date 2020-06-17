@@ -3,7 +3,7 @@ package wrapper;
 public class WrapperDemo {
 	public static void main(String[] args) {
 		/**
-		 * »ù±¾ÀàÐÍ
+		 * åŸºæœ¬ç±»åž‹
 		 */
 		byte bt = 3;
 		short s = 7;
@@ -15,7 +15,7 @@ public class WrapperDemo {
 		char ch = 'A';
 
 		/**
-		 * °ü×°Àà
+		 * åŒ…è£…ç±»
 		 */		
 		Byte bt1 = 3;
 		Short sh1 = 7;

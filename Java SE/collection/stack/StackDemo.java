@@ -4,9 +4,9 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * ջ�Ǿ�������ݽṹ֮һ��
- * ��ѭ����ȳ���ԭ��
- * һ��ʹ��ջ��ʵ�ֺ��˵Ĺ���
+ * 栈是经典的数据结构之一，
+ * 遵循后进先出的原则。
+ * 一般使用栈来实现后退的功能
  * @author jiao_
  *
  */

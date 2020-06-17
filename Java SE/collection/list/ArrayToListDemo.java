@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Êı×é×ª»»Îª¼¯ºÏ
- * Ê¹ÓÃÊı×éµÄ¹¤¾ßÀàArraysµÄ¾²Ì¬·½·¨asList£¬
- * ¿ÉÒÔ½«Ò»¸öÊı×é×ª»»ÎªÒ»¸öList¼¯ºÏ¡£
+ * æ•°ç»„è½¬æ¢ä¸ºé›†åˆ
+ * ä½¿ç”¨æ•°ç»„çš„å·¥å…·ç±»Arraysçš„é™æ€æ–¹æ³•asListï¼Œ
+ * å¯ä»¥å°†ä¸€ä¸ªæ•°ç»„è½¬æ¢ä¸ºä¸€ä¸ªListé›†åˆã€‚
  * @author jiao_
  *
  */
@@ -20,27 +20,27 @@ public class ArrayToListDemo {
 		System.out.println("list: " + list);
 		
 		/**
-		 * ¶Ô¼¯ºÏÔªËØµÄ¸Ä¶¯£¬¾ÍÊÇ¶ÔÔ­Êı×éµÄ¸Ä¶¯
+		 * å¯¹é›†åˆå…ƒç´ çš„æ”¹åŠ¨ï¼Œå°±æ˜¯å¯¹åŸæ•°ç»„çš„æ”¹åŠ¨
 		 */
 		list.set(1, "2");
 		System.out.println("list: " + list);
 		System.out.println("array: " + Arrays.toString(array));
 		/**
-		 * ÓÉÓÚÊı×éÊÇ¶¨³¤µÄ£¬ËùÒÔÊı×é×ª»¯µÃÀ´µÄ¼¯ºÏ²»ÄÜÔöÉ¾ÔªËØ
+		 * ç”±äºæ•°ç»„æ˜¯å®šé•¿çš„ï¼Œæ‰€ä»¥æ•°ç»„è½¬åŒ–å¾—æ¥çš„é›†åˆä¸èƒ½å¢åˆ å…ƒç´ 
 		 */
 //		list.add("five");
 //		list.remove(0);
 		
 		/**
-		 * ÈôÏëÔöÉ¾ÔªËØ£¬×ÔĞĞ´´½¨Ò»¸öĞÂµÄ¼¯ºÏ¡£
-		 * Ê¹ÓÃaddAll()·½·¨°ÑÊı×é×ª»»¶øÀ´µÄ¼¯ºÏÖĞµÄÔªËØÌí¼Óµ½ĞÂ¼¯ºÏÖĞ
+		 * è‹¥æƒ³å¢åˆ å…ƒç´ ï¼Œè‡ªè¡Œåˆ›å»ºä¸€ä¸ªæ–°çš„é›†åˆã€‚
+		 * ä½¿ç”¨addAll()æ–¹æ³•æŠŠæ•°ç»„è½¬æ¢è€Œæ¥çš„é›†åˆä¸­çš„å…ƒç´ æ·»åŠ åˆ°æ–°é›†åˆä¸­
 		 */
 		List<String> list2 = new ArrayList<>();
 		list2.addAll(list);
 		list2.add("five");
 		System.out.println(list2);
 		/**
-		 * ÆäÊµ²»ÓÃaddAll(),Ö±½ÓÊ¹ÓÃ¼¯ºÏÖØÔØµÄ¹¹Ôì·½·¨¼´¿É
+		 * å…¶å®ä¸ç”¨addAll(),ç›´æ¥ä½¿ç”¨é›†åˆé‡è½½çš„æ„é€ æ–¹æ³•å³å¯
 		 */
 		List<String> list3 = new ArrayList<>(Arrays.asList(array));
 		System.out.println("list3:" + list3);

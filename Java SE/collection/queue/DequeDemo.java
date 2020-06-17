@@ -4,8 +4,8 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * java.util.Deque½Ó¿Ú£¬Ë«¶Ë¶ÓÁĞ¡£
- * Á½²à¶¼¿ÉÒÔ³öÈë¶Ó¡£
+ * java.util.Dequeæ¥å£ï¼ŒåŒç«¯é˜Ÿåˆ—ã€‚
+ * ä¸¤ä¾§éƒ½å¯ä»¥å‡ºå…¥é˜Ÿã€‚
  * @author jiao_
  *
  */

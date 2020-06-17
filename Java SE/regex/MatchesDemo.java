@@ -3,15 +3,15 @@ package regex;
 public class MatchesDemo {
 	public static void main(String[] args) {
 		/**
-		 * Ê¹ÓÃÕıÔò±í´ïÊ½ÑéÖ¤µç×ÓÓÊÏä
+		 * ä½¿ç”¨æ­£åˆ™è¡¨è¾¾å¼éªŒè¯ç”µå­é‚®ç®±
 		 */
 		String email = "fan_cq@tedu.com.cn";
 		String regex = "\\w+@\\w+(\\.[a-zA-Z]+)+";
 		boolean matched = email.matches(regex);
 		if (matched) {
-			System.out.println("ÊÇÓÊÏä");
+			System.out.println("æ˜¯é‚®ç®±");
 		} else {
-			System.out.println("²»ÊÇÓÊÏä");
+			System.out.println("ä¸æ˜¯é‚®ç®±");
 		}
 		
 	}

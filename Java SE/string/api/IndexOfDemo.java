@@ -8,7 +8,7 @@ public class IndexOfDemo {
 		i = str.indexOf("X");
 		System.out.println(i);
 		/**
-		 * ´ÓÖ¸¶¨Î»ÖÃ¿ªÊ¼²éÕÒ×Ö·û
+		 * ä»æŒ‡å®šä½ç½®å¼€å§‹æŸ¥æ‰¾å­—ç¬¦
 		 */
 		i = str.indexOf('i', 3);
 		System.out.println(i);
@@ -18,19 +18,19 @@ public class IndexOfDemo {
 		System.out.println(i);
 		
 		/**
-		 * ²éÕÒ×Ö·û´®´®
+		 * æŸ¥æ‰¾å­—ç¬¦ä¸²ä¸²
 		 */
 		i = str.indexOf("in");
 		System.out.println(i);
 		
 		/**
-		 * ´ÓÖ¸¶¨Î»ÖÃ²éÕÒ×Ö·û´®
+		 * ä»æŒ‡å®šä½ç½®æŸ¥æ‰¾å­—ç¬¦ä¸²
 		 */
 		i = str.indexOf("in", 3);
 		System.out.println(i);
 		
 		/**
-		 * ÕÒ²»µ½£¬·µ»Ø-1
+		 * æ‰¾ä¸åˆ°ï¼Œè¿”å›-1
 		 */
 		i = str.indexOf("OK");
 		System.out.println(i);

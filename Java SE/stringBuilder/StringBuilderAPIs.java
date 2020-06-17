@@ -2,44 +2,44 @@ package stringBuilder;
 
 public class StringBuilderAPIs {
 	public static void main(String[] args) {
-		String string = "ºÃºÃÑ§Ï°Java£¡";
-		//Ä¬ÈÏ¿Õ´®
+		String string = "å¥½å¥½å­¦ä¹ Javaï¼";
+		//é»˜è®¤ç©ºä¸²
 		StringBuilder builder = new StringBuilder();
 		System.out.println(builder);
 		builder = new StringBuilder(string);
 		System.out.println(builder);
 		/**
-		 * Ôö
-		 * append(String str)·½·¨£ºÔÚ×Ö·û´®Ä©Î²×·¼ÓÄÚÈİ
-		 * ºÃºÃÑ§Ï°java£¬ÎªÁËÕÒ¸öºÃ¹¤×÷!
+		 * å¢
+		 * append(String str)æ–¹æ³•ï¼šåœ¨å­—ç¬¦ä¸²æœ«å°¾è¿½åŠ å†…å®¹
+		 * å¥½å¥½å­¦ä¹ javaï¼Œä¸ºäº†æ‰¾ä¸ªå¥½å·¥ä½œ!
 		 * 
 		 */
-		builder.append("£¬ÎªÁËÕÒ¸öºÃ¹¤×÷");
+		builder.append("ï¼Œä¸ºäº†æ‰¾ä¸ªå¥½å·¥ä½œ");
 		System.out.println(builder);
 		
 		/**
-		 * Ìæ»»
+		 * æ›¿æ¢
 		 * replace(int start, int end, String str1)
-		 * Ìæ»»Ö¸¶¨·¶Î§ÄÚµÄ×Ö·û´® 
+		 * æ›¿æ¢æŒ‡å®šèŒƒå›´å†…çš„å­—ç¬¦ä¸² 
 		 */
-		builder.replace(8, 17, "£¬¾ÍÊÇÎªÁË¸Ä±äÊÀ½ç!");
+		builder.replace(8, 17, "ï¼Œå°±æ˜¯ä¸ºäº†æ”¹å˜ä¸–ç•Œ!");
 		System.out.println(builder);
 		
 		
 		/**
-		 * É¾³ı
+		 * åˆ é™¤
 		 * delete(int start, int end)
-		 * É¾³ıÖ¸¶¨·¶Î§µÄ×Ö·û´®
+		 * åˆ é™¤æŒ‡å®šèŒƒå›´çš„å­—ç¬¦ä¸²
 		 */
 		builder.delete(0, 8);
 		System.out.println(builder);
 		
 		/**
-		 * ²åÈë
+		 * æ’å…¥
 		 * insert(int start, String str1)
-		 * ÔÚÖ¸¶¨·¶Î§²åÈë×Ö·û´®,
+		 * åœ¨æŒ‡å®šèŒƒå›´æ’å…¥å­—ç¬¦ä¸²,
 		 */
-		builder.insert(0, "»î×Å");
+		builder.insert(0, "æ´»ç€");
 		System.out.println(builder);
 	}
 }

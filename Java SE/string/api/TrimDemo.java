@@ -2,7 +2,7 @@ package string.api;
 
 public class TrimDemo {
 	public static void main(String[] args) {
-		String str = "\n\t   Ğ¡Öí  \n";
+		String str = "\n\t   å°çŒª  \n";
 		System.out.println("str:" + str);
 		str = str.trim();
 		System.out.println("strTrimed:" + str);
@@ -11,9 +11,9 @@ public class TrimDemo {
 		String name = "robin  ";
 		name = name.trim();
 		if (name.equals("robin")) {
-			System.out.println("ÓÃ»§Ãû´æÔÚ");
+			System.out.println("ç”¨æˆ·åå­˜åœ¨");
 		} else {
-			System.out.println("ÓÃ»§Ãû²»´æÔÚ");
+			System.out.println("ç”¨æˆ·åä¸å­˜åœ¨");
 		}
 	}
 }

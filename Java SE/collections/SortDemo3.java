@@ -7,13 +7,13 @@ import java.util.List;
 public class SortDemo3 {
 	public static void main(String[] args) {
 		List<String> list = new ArrayList<>();
-		list.add("²ÔÀÏÊ¦");
-		list.add("´«Ææ");
-		list.add("Ð¡ÔóÀÏÊ¦");
+		list.add("è‹è€å¸ˆ");
+		list.add("ä¼ å¥‡");
+		list.add("å°æ³½è€å¸ˆ");
 		System.out.println(list);
 		/**
-		 * µ±ÔªËØÀàÐÍ¶¨ÒåµÄ±È½Ï¹æÔò²»Âú×öÎÒÃÇµÄÅÅÐòÐèÇóÊ±£¬
-		 * ¿ÉÒÔ×Ô¶¨Òå±È½Ï¹æÔò¡£
+		 * å½“å…ƒç´ ç±»åž‹å®šä¹‰çš„æ¯”è¾ƒè§„åˆ™ä¸æ»¡åšæˆ‘ä»¬çš„æŽ’åºéœ€æ±‚æ—¶ï¼Œ
+		 * å¯ä»¥è‡ªå®šä¹‰æ¯”è¾ƒè§„åˆ™ã€‚
 		 */
 		Collections.sort(list,
 				(o1, o2)->

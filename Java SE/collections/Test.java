@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Éú³ÉÒ»¸ö·Å10¸öÕûÊı£¨100ÒÔÄÚ£©µÄList¼¯ºÏ£¬
- * °´ÕÕ´Ó´óµ½Ğ¡µÄ¹æÔòÅÅĞò
+ * ç”Ÿæˆä¸€ä¸ªæ”¾10ä¸ªæ•´æ•°ï¼ˆ100ä»¥å†…ï¼‰çš„Listé›†åˆï¼Œ
+ * æŒ‰ç…§ä»å¤§åˆ°å°çš„è§„åˆ™æ’åº
  * @author jiao_
  *
  */
@@ -21,7 +21,7 @@ public class Test {
 		}
 		Collections.sort(list, (i1, i2) -> i2 - i1);
 		System.out.println(list);
-		// JDK8Ö®ºó£¬ListÒ²Ìá¹©ÁË³ÉÔ±·½·¨sort()
+		// JDK8ä¹‹åï¼ŒListä¹Ÿæä¾›äº†æˆå‘˜æ–¹æ³•sort()
 		list.sort((i1, i2) -> (i1 - i2));
 		System.out.println(list);
 	}

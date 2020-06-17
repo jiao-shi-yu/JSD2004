@@ -17,19 +17,19 @@ public class SortDemo2 {
 		list.add(new Point(1, 1));
 		
 		/**
-		 * sort()·½·¨ÒªÇó¼¯ºÏµÄÔªËØÊµÏÖÒ»¸öComparable½Ó¿Ú
+		 * sort()æ–¹æ³•è¦æ±‚é›†åˆçš„å…ƒç´ å®ç°ä¸€ä¸ªComparableæ¥å£
 		 */
 		
 		/**
-		 * µ«ÊÇÊµÏÖComparable½Ó¿ÚµÄ·½Ê½£¬¾ßÓĞ¸ßÇÖÈëĞÔ
-		 * ´«ÈëÒ»¸öComparatorµÄÊµÏÖÀàµÄ¶ÔÏó
+		 * ä½†æ˜¯å®ç°Comparableæ¥å£çš„æ–¹å¼ï¼Œå…·æœ‰é«˜ä¾µå…¥æ€§
+		 * ä¼ å…¥ä¸€ä¸ªComparatorçš„å®ç°ç±»çš„å¯¹è±¡
 		 */
 	
-		// Ê¹ÓÃComparatorÊµÀı
+		// ä½¿ç”¨Comparatorå®ä¾‹
 		System.out.println(list);
 		Collections.sort(list, new PointComparator());
 		System.out.println(list);
-		// Ê¹ÓÃÄäÃûÄÚ²¿Àà
+		// ä½¿ç”¨åŒ¿åå†…éƒ¨ç±»
 		Collections.shuffle(list);
 		System.out.println(list);
 		Collections.sort(list, new Comparator<Point>() {
@@ -40,7 +40,7 @@ public class SortDemo2 {
 			}
 		});
 		System.out.println(list);
-		// Ê¹ÓÃLambda±í´ïÊ½--2ĞĞ
+		// ä½¿ç”¨Lambdaè¡¨è¾¾å¼--2è¡Œ
 		Collections.shuffle(list);
 		System.out.println(list);
 		Collections.sort(list, (o1, o2)-> {
@@ -49,7 +49,7 @@ public class SortDemo2 {
 			return len1 - len2;
 		});
 		System.out.println(list);
-		// Ê¹ÓÃLambda±í´ïÊ½--1ĞĞ
+		// ä½¿ç”¨Lambdaè¡¨è¾¾å¼--1è¡Œ
 		Collections.shuffle(list);
 		System.out.println(list);
 		Collections.sort(list, (o1, o2)-> 

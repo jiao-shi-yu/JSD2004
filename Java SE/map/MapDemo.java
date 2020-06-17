@@ -4,21 +4,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * java.util.Map½Ó¿Ú ²éÕÒ±í
- * MapÌåÏÖµÄÑù×ÓÊÇÒ»¸ö¶àĞĞÁ½ÁĞµÄ±í¸ñ£¬
- * ÆäÖĞ×óÁĞ³ÆÎªKey£¬ÓÒÁĞ³ÆÎªValue¡£
- * Map×ÜÊÇ³É¶ÔµÄ±£´æÊı¾İ£¬²¢ÇÒ×ÜÊÇ¸ù¾İkeyÈ¥»ñÈ¡¶ÔÓ¦µÄvalue.
- * ²éÑ¯µÄÌõ¼ş×÷Îªkey, ²éÑ¯µÄ½á¹û×÷Îªvalue¡£
+ * java.util.Mapæ¥å£ æŸ¥æ‰¾è¡¨
+ * Mapä½“ç°çš„æ ·å­æ˜¯ä¸€ä¸ªå¤šè¡Œä¸¤åˆ—çš„è¡¨æ ¼ï¼Œ
+ * å…¶ä¸­å·¦åˆ—ç§°ä¸ºKeyï¼Œå³åˆ—ç§°ä¸ºValueã€‚
+ * Mapæ€»æ˜¯æˆå¯¹çš„ä¿å­˜æ•°æ®ï¼Œå¹¶ä¸”æ€»æ˜¯æ ¹æ®keyå»è·å–å¯¹åº”çš„value.
+ * æŸ¥è¯¢çš„æ¡ä»¶ä½œä¸ºkey, æŸ¥è¯¢çš„ç»“æœä½œä¸ºvalueã€‚
  * 
- * MapÖĞµÄkey²»ÔÊĞíÖØ¸´£¨equals±È½ÏÎªtrue);
+ * Mapä¸­çš„keyä¸å…è®¸é‡å¤ï¼ˆequalsæ¯”è¾ƒä¸ºtrue);
  * 
- * Map³£¼ûµÄÊµÏÖÀà£º
- * java.util.HashMap: É¢ÁĞ±í
- * Ê¹ÓÃÉ¢ÁĞËã·¨ÊµÏÖµÄMap£¬
- * µ±½ñ²éÑ¯ËÙ¶È×î¿ìµÄÊı¾İ½á¹¹¡£
+ * Mapå¸¸è§çš„å®ç°ç±»ï¼š
+ * java.util.HashMap: æ•£åˆ—è¡¨
+ * ä½¿ç”¨æ•£åˆ—ç®—æ³•å®ç°çš„Mapï¼Œ
+ * å½“ä»ŠæŸ¥è¯¢é€Ÿåº¦æœ€å¿«çš„æ•°æ®ç»“æ„ã€‚
  * @author jiao_
  * 
- * java.util.TreeMap: ¶ş²æÊ÷ÊµÏÖµÄMap¡£
+ * java.util.TreeMap: äºŒå‰æ ‘å®ç°çš„Mapã€‚
  *
  */
 public class MapDemo {
@@ -27,26 +27,26 @@ public class MapDemo {
 		/*
 		 * V put(K k, V v);
 		 */
-		Integer value = map.put("ÓïÎÄ", 99);
+		Integer value = map.put("è¯­æ–‡", 99);
 		System.out.println("value:"+value);
-		map.put("ÊıÑ§", 98);
-		map.put("Ó¢Óï", 97);
-		map.put("ÎïÀí", 96);
-		map.put("»¯Ñ§", 99);
+		map.put("æ•°å­¦", 98);
+		map.put("è‹±è¯­", 97);
+		map.put("ç‰©ç†", 96);
+		map.put("åŒ–å­¦", 99);
 		System.out.println(map);
 		
-		value = map.put("ÓïÎÄ", 100);
+		value = map.put("è¯­æ–‡", 100);
 		System.out.println("value:" + value);
 		System.out.println(map);
 		
 		/**
 		 * V get(Object key)
-		 * ¸ù¾İÖ¸¶¨µÄkey»ñÈ¡value,
-		 * Èç¹û¸ø¶¨µÄkeyÔÚMapÖĞ²»´æÔÚ£¬Ôò·µ»Ønull
+		 * æ ¹æ®æŒ‡å®šçš„keyè·å–value,
+		 * å¦‚æœç»™å®šçš„keyåœ¨Mapä¸­ä¸å­˜åœ¨ï¼Œåˆ™è¿”å›null
 		 */
-		value = map.get("»¯Ñ§");
+		value = map.get("åŒ–å­¦");
 		System.out.println(value);
-		value = map.get("ÌåÓı");
+		value = map.get("ä½“è‚²");
 		System.out.println(value);
 		
 		int size = map.size();
@@ -56,7 +56,7 @@ public class MapDemo {
 		/**
 		 * V remove(Object key)
 		 */
-		value = map.remove("ÎïÀí");
+		value = map.remove("ç‰©ç†");
 		System.out.println(map);
 		System.out.println(value);
 		
@@ -64,7 +64,7 @@ public class MapDemo {
 		 * boolean containsKey(Object key)
 		 * boolean containsValue(Object value)
 		 */
-		boolean ck = map.containsKey("ÓïÎÄ");
+		boolean ck = map.containsKey("è¯­æ–‡");
 		boolean cv = map.containsValue(97);
 		System.out.println("containsKey: " + ck);
 		System.out.println("containsValue: " + cv);

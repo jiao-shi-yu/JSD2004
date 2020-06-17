@@ -1,6 +1,6 @@
 package stringBuilder;
 /**
- * 测试String和StringBuilder的性能
+ * 娴嬭瘯String鍜孲tringBuilder鐨勬�ц兘
  * @author jiao_
  *
  */

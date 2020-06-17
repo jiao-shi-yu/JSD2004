@@ -6,7 +6,7 @@ public class IsEmptyDemo {
 		System.out.println(str1.isEmpty());
 		
 		
-		String str2 = "达内科技";
+		String str2 = "杈惧唴绉戞妧";
 		System.out.println(str2.isEmpty());
 		
 	}

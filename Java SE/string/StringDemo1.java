@@ -10,7 +10,7 @@ public class StringDemo1 {
 		String s4 = "Thinking";
 		s4 += " in java!";
 		System.out.println(s4);
-		// Ô­×Ö·û´®²»¸Ä±ä
+		// åŸå­—ç¬¦ä¸²ä¸æ”¹å˜
 		s4.toUpperCase();
 		System.out.println(s4);
 	}

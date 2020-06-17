@@ -7,32 +7,32 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 /**
- * MapµÄ±éÀú
- * ÈıÖÖ·½Ê½£º
- * 1. ±éÀúkey
- * 2. ±éÀúvalue
- * 3. ±éÀúkey-value pairs 
+ * Mapçš„éå†
+ * ä¸‰ç§æ–¹å¼ï¼š
+ * 1. éå†key
+ * 2. éå†value
+ * 3. éå†key-value pairs 
  * @author jiao_
  *
  */
 public class MapDemo2 {
 	public static void main(String[] args) {
 		Map<String, Integer> map = new HashMap<>();
-		map.put("ÓïÎÄ", 99);
-		map.put("ÊıÑ§", 99);
-		map.put("Ó¢Óï", 97);
-		map.put("ÎïÀí", 96);
-		map.put("»¯Ñ§", 90);
+		map.put("è¯­æ–‡", 99);
+		map.put("æ•°å­¦", 99);
+		map.put("è‹±è¯­", 97);
+		map.put("ç‰©ç†", 96);
+		map.put("åŒ–å­¦", 90);
 		System.out.println(map);
 		
 		
-		// ±éÀúkey
+		// éå†key
 		Set<String> keySet = map.keySet();
 		for (String key : keySet) {
 			System.out.println(key);
 		}
 		
-		// ±éÀúentry
+		// éå†entry
 		Set<Entry<String, Integer>> entrySet = map.entrySet();
 		for (Entry<String, Integer> entry : entrySet) {
 			String key = entry.getKey();
@@ -40,7 +40,7 @@ public class MapDemo2 {
 			System.out.println(key + ": " + value);
 		}
 		
-		// ±éÀú¼üÖµ¶Ô
+		// éå†é”®å€¼å¯¹
 		Collection<Integer> values = map.values();
 		for (Integer value : values) {
 			System.out.println(value);

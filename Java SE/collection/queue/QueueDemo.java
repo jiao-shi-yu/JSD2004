@@ -4,10 +4,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * java.util.Queue½Ó¿Ú 
- * ¶ÓÁĞÊÇ¾­µäµÄÊı¾İ½á¹¹Ö®Ò»¡£´æÈ¡ºÍ¶ÁÈ¡ÔªËØ£¬×ñÑ­ÏÈÈëÏÈ³öµÄÔ­Ôò¡£
+ * java.util.Queueæ¥å£ 
+ * é˜Ÿåˆ—æ˜¯ç»å…¸çš„æ•°æ®ç»“æ„ä¹‹ä¸€ã€‚å­˜å–å’Œè¯»å–å…ƒç´ ï¼Œéµå¾ªå…ˆå…¥å…ˆå‡ºçš„åŸåˆ™ã€‚
  * 
- * QueueÊÇCollectionµÄ×Ó½Ó¿Ú¡£
+ * Queueæ˜¯Collectionçš„å­æ¥å£ã€‚
  * @author jiao_
  */
 public class QueueDemo {
@@ -22,12 +22,12 @@ public class QueueDemo {
 		System.out.println(queue);
 		int size = queue.size();
 		System.out.println("size:" + size);
-		// poll() »ñÈ¡¶ÓÊ×ÔªËØ²¢½«Æä´Ó¶ÓÁĞÖĞÉ¾³ı
+		// poll() è·å–é˜Ÿé¦–å…ƒç´ å¹¶å°†å…¶ä»é˜Ÿåˆ—ä¸­åˆ é™¤
 		String str = queue.poll();
 		System.out.println(str);
 		System.out.println(queue);
 		
-		// peek() ÒıÓÃ¶ÓÊ×ÔªËØ£¬»ñÈ¡ºóÔªËØÈÔÈ»ÔÚ¶ÓÁĞÖĞ
+		// peek() å¼•ç”¨é˜Ÿé¦–å…ƒç´ ï¼Œè·å–åå…ƒç´ ä»ç„¶åœ¨é˜Ÿåˆ—ä¸­
 		String str2 = queue.peek();
 		System.out.println(str2);
 		System.out.println(queue);

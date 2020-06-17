@@ -1,15 +1,15 @@
 package wrapper.number;
 /**
- * Í¨¹ı²ÎÊı£¬µÃµ½Ä³¸ö°ü×°ÀàµÄÊµÀı
+ * é€šè¿‡å‚æ•°ï¼Œå¾—åˆ°æŸä¸ªåŒ…è£…ç±»çš„å®ä¾‹
  * @author jiao_
  *
  */
 public class ValueOfDemo {
 	public static void main(String[] args) {
-		// Í¨¹ı»ù±¾ÀàĞÍ
+		// é€šè¿‡åŸºæœ¬ç±»å‹
 		Integer a = Integer.valueOf(99);
 		System.out.println(a.getClass() + ": " + a);
-		// Í¨¹ıÊı×Ö×Ö·û´®
+		// é€šè¿‡æ•°å­—å­—ç¬¦ä¸²
 		Integer b = Integer.valueOf("99");
 		System.out.println(b.getClass() + ": " + b);
 	}

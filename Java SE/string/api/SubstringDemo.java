@@ -16,14 +16,14 @@ public class SubstringDemo {
 		System.out.println(subStr);
 		
 		/**
-		 * °¸Àı:¼ì²éÒ»¸öÍ¼Æ¬ÊÇ·ñÎª.png
+		 * æ¡ˆä¾‹:æ£€æŸ¥ä¸€ä¸ªå›¾ç‰‡æ˜¯å¦ä¸º.png
 		 */
 		String file = "demo.png";
 		String suffix = file.substring(file.length()-4);
 		if (!suffix.equals(".png")) {
-			System.out.println("file²»ÊÇÍ¼Æ¬");
+			System.out.println("fileä¸æ˜¯å›¾ç‰‡");
 		} else {
-			System.out.println("fileÊÇÍ¼Æ¬");
+			System.out.println("fileæ˜¯å›¾ç‰‡");
 		}
 		
 	}
