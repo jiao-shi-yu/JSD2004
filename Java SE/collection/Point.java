@@ -1,8 +1,8 @@
 package collection;
 
 public class Point {
-	int x;
-	int y;
+	private int x;
+	private int y;
 	public int getX() {
 		return x;
 	}
@@ -13,11 +13,6 @@ public class Point {
 		return y;
 	}
 	public void setY(int y) {
-		this.y = y;
-	}
-	public Point(int x, int y) {
-		super();
-		this.x = x;
 		this.y = y;
 	}
 	@Override
@@ -47,8 +42,10 @@ public class Point {
 	public String toString() {
 		return "(" + x + "," + y + ")";
 	}
-	
-	
-	
+	public Point(int x, int y) {
+		super();
+		this.x = x;
+		this.y = y;
+	}
 	
 }
