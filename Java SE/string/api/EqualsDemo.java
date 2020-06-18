@@ -7,9 +7,9 @@ public class EqualsDemo {
 		
 		String s3 = new String(s1);
 		
-		System.out.println(s1==s2);
-		System.out.println(s1==s3);
-		System.out.println(s1.equals(s3));
+		System.out.println(s1==s2);	// true
+		System.out.println(s1==s3);	// false
+		System.out.println(s1.equals(s3)); //true
 		
 	}
 }

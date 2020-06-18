@@ -3,7 +3,8 @@ package string.api;
 public class CharAtDemo {
 	public static void main(String[] args) {
 		String str = "Thinking in Java";
-		char c = str.charAt(12);
+					//01234567890123456
+		char c = str.charAt(12);	// J
 		System.out.println(c);
 		/**
 		 * 如果指定的下标过大，会出现数组下标越界异常
@@ -18,6 +19,7 @@ public class CharAtDemo {
 				count ++;
 			}
 		}
+		// Thinking in Java中有3个i字符
 		System.out.println(str+"中有"+count+"个i字符");
 	}
 }
