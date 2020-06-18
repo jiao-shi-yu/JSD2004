@@ -9,6 +9,6 @@ public class NewFileDemo {
 		 */
 		File file = new File("C://Windows");
 		System.out.println(file);
-		file.get
+		
 	}
 }

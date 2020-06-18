@@ -12,3 +12,10 @@
 /GetNameDemo.class
 /NewFileDemo.class
 /GetAbsolutePathDemo.class
+/GetAbsoluteFileDemo.class
+/GetParentDemo.class
+/GetParentFileDemo.class
+/GetCononicalName.class
+/GetPathDemo.class
+/GetCononicalPathDemo.class
+/MkDirDemo.class
