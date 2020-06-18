@@ -3,7 +3,7 @@ package string.api;
 public class CharAtDemo {
 	public static void main(String[] args) {
 		String str = "Thinking in Java";
-					//01234567890123456
+		//            01234567890123456
 		char c = str.charAt(12);	// J
 		System.out.println(c);
 		/**
