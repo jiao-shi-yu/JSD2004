@@ -34,5 +34,10 @@ public class ListFilesDemo2 {
 		for(File file : subs) {
 			System.out.println(file.getName());
 		}
+		System.out.println("------");
+		File[] subs2 = dir.listFiles(f->f.getName().startsWith("."));
+		for (File file : subs2) {
+			System.out.println(file.getName());
+		}
 	}
 }
