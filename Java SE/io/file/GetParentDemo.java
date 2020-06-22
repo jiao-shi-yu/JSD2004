@@ -1,11 +1,12 @@
-package file.getPath;
+package io.file;
 
 import java.io.File;
 
-public class GetPathDemo {
+public class GetParentDemo {
 	public static void main(String[] args) {
 		File file = new File("./file/NewFileDemo.java");
-		String path = file.getPath();
-		System.out.println(path);
+		String parent = file.getParent();
+		System.out.println(parent);
+		
 	}
 }

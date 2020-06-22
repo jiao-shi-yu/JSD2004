@@ -101,9 +101,9 @@ public void reflection.Person.say(java.lang.String)
 ### Class 对象的方法
 - `String getName()`: 获取当前类对象所表示的类的名字。
 - `Method[] getMethods() throws SecurityException`: 获取所有公有方法。
-- `Method[] getDeclaredMethods()`: 获取所有自己生命的方法。
-
+- `Method[] getDeclaredMethods()`: 获取所有自己声明的方法。
 - `Object newInstance()`:调用无参构造器，获取一个实例对象
+- `Constructor<T> getConstructor(Class<?>... parameterTypes);`: 获取一个指定参数类型的构造器
 ```java
 public class ReflectionDemo2 {
     public static void main(String[] args) {
@@ -125,38 +125,11 @@ public class ReflectionDemo2 {
     
 }
 ```
-- `getConstructor(parameterTypes)`: 获取一个指定参数类型的构造器
+
 
 ### Method 对象的方法
 - `String getName()`: 得到方法名
-- `void invoke(Object obj, Object args...)` 方法调用
-
-### Constructor 中的方法
-- `Object newInstance()`:获取一个实例对象
-```java
-public class ReflectionDemo3 {
-    public static void main(String[] args) {
-        
-        try {
-            
-            // 1. 获取类对象
-            Class<?> cls = Class.forName("reflection.Student");
-            
-            // 2. 获取构造器
-            Constructor<?> constructor = cls.getConstructor(String.class, int.class);
-            
-            // 3. 调用构造器的 newInstance 方法
-            Object obj = constructor.newInstance("老王", 99);
-            
-            System.out.println(obj);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    
-    }
-    
-}
-```
+- `void invoke(Object obj, Object... args)` 方法调用
 ```java
 /**
  * 利用反射调用方法
@@ -193,6 +166,7 @@ sayHello
 
 ```
 
+
 ```java
 import java.lang.reflect.Method;
 
@@ -218,7 +192,38 @@ person:大家好我是:李四, 我今年44
 ```
 
 
+### Constructor 中的方法
+
+- `T newInstance(Object... initargs)`: 传入初始化参数，获取一个实例对象
+```java
+public class ReflectionDemo3 {
+    public static void main(String[] args) {
+        
+        try {
+            
+            // 1. 获取类对象
+            Class<?> cls = Class.forName("reflection.Student");
+            
+            // 2. 获取构造器
+            Constructor<?> constructor = cls.getConstructor(String.class, int.class);
+            
+            // 3. 调用构造器的 newInstance 方法
+            Object obj = constructor.newInstance("老王", 99);
+            
+            System.out.println(obj);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    
+    }
+    
+}
+```
+
+
+
 ## 利用反射，调用对象的**私有方法**。
+
 需要用到`Method`的`void setAccessiable(true)`:设置可访问性。
 ```java
 public class ReflectionDemo6 {

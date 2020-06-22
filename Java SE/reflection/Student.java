@@ -14,6 +14,9 @@ public class Student {
 		this.name = name;
 		this.age = age;
 	}
+	public void study() {
+		System.out.println("我正在学习");
+	}
 	public void sayHello() {
 		System.out.println("学生：大家好，我是" + name + ", 我今年" + age + "岁");
 	}
