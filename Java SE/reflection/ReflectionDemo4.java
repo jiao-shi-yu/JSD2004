@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @author yuyu
  *
  */
-public class RelectionDemo4 {
+public class ReflectionDemo4 {
 	public static void main(String[] args) throws Exception {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("请输入类名");

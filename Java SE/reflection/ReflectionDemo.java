@@ -7,10 +7,13 @@ import java.util.Scanner;
 
 public class ReflectionDemo {
 	public static void main(String[] args) {
-		
+		Class intClass = int.class;
+		System.out.println(intClass.getName());
+		Package intPackage = intClass.getPackage();
 		// Class clazz = Person.class;
 		try {
 			// 获取用户输入
+			
 			Scanner scan = new Scanner(System.in);
 			System.out.println("请输入类的完全限定名：");
 			String className = scan.nextLine();
