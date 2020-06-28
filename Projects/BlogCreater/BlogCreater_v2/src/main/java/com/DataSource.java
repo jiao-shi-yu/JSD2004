@@ -68,6 +68,7 @@ public class DataSource {
 			allSubjectNames.add(aSubject);
 		}
 		System.err.println(allSubjectNames);
+		
 	}
 
 	private void initIndexPageTopArticles() {
@@ -78,23 +79,25 @@ public class DataSource {
 	private void initTop15Articles() {
 
 		/**
-		 * 1. 将所有栏目中的所有文章存入一个文章集合
+		 * 1. 将所有栏目中的所有文章存入一个文章List集合
 		 */
 		Collection<List<Article>> values = dataSource.values();
 		/**
 		 * 2. 将得到的文章集合按照最后修改时间排序
 		 */
-		for (List<Article> e :values) {
-			topArticles.addAll(e);
+		for (List<Article> list :values) {
+			topArticles.addAll(list);
 		}
+		System.err.println(topArticles);
 		// 排序
 		topArticles.sort(
-				(a1, a2) -> a1.getLastModified() > a1.getLastModified() ? -1 : 1);
+				(a1, a2) -> a1.getLastModified() > a2.getLastModified() ? -1 : 1);
 		
 		/**
 		 * 3. 取15条
 		 */
 		topArticles = topArticles.subList(0, Integer.min(topArticles.size(), 15));
+		System.err.println(topArticles);
 
 	}
 

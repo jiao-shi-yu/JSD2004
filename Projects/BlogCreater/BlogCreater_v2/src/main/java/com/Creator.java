@@ -103,7 +103,7 @@ public class Creator {
 					f->f.getName().endsWith(".md")
 					&&!f.getName().startsWith(".")
 					&&!f.getName().startsWith("_"));
-			// 栏目下文章文件，按照时间倒序排列
+			// 栏目下文章文件，按照时间倒序排列 // 栏目内排了序
 			Arrays.sort(articleFiles, (f1, f2) -> f1.lastModified() < f2.lastModified() ? -1 : 1);
 			List<Article> articleList = new ArrayList<>();
 			// 遍历每一个文章文件
@@ -116,4 +116,5 @@ public class Creator {
 		}
 		return new DataSource(map);
 	}
+	
 }
