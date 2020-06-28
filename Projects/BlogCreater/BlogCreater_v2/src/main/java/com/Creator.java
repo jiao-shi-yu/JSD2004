@@ -59,7 +59,8 @@ public class Creator {
 			System.out.println("首页已经生成");
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		} 
+		
 	}
 	/**
 	 * 生成导出博客页面的根目录
