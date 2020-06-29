@@ -79,7 +79,7 @@ public class DataSource {
 	private void initTop15Articles() {
 
 		/**
-		 * 1. 将所有栏目中的所有文章存入一个文章List集合
+		 * 1. 将所有栏目中的所有文章存入topArticles
 		 */
 		Collection<List<Article>> values = dataSource.values();
 		/**

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>java</title>
+  <title th:text="${subjectName}">java</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="renderer" content="webkit"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,8 +20,11 @@
       传奇的博客
     </a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="navbar-nav mr-auto" >
-        <a class="nav-item nav-link" href="./index.html">主页</a>
+      <div class="navbar-nav mr-auto" th:remove="all-but-first">
+        <a	th:each="subject: ${dataSource.allSubjectNames}"
+			th:text="${subject.subjectName}"
+			th:href="@{../{path}/index.html(path=${subject.pathName})}" 
+			class="nav-item nav-link" href="./index.html">主页</a>
         <a class="nav-item nav-link" href="./index.html">IT</a>
         <a class="nav-item nav-link" href="./index.html">Java</a>
         <a class="nav-item nav-link" href="./index.html">JavaScript</a>
@@ -40,9 +43,12 @@
     <div class="col-8">
       <div class="container bg-white py-2 my-5 mb-3 px-5">
 		<!-- 列表标题 -->
-        <h1 class="font-weight-normal pt-3 text-center mb-3 ">Java文章</h1>
-        <div class="list-group list-group-flush pb-3 mt-2 pt-3 border-top border-info ">
-          <a class="text-info list-group-item" href="detail.html">2020/04/04 Rust语言的编程范式</a>
+        <h1 class="font-weight-normal pt-3 text-center mb-3 " th:text="${subjectName}">Java文章</h1>
+        <div th:remove="all-but-first" class="list-group list-group-flush pb-3 mt-2 pt-3 border-top border-info ">
+          <a th:each="article:${articles}"
+          	 th:text="${article.metaData.date} + ' ' + ${article.metaData.title}"
+          	 th:href="@{../{path}/{file}(path=${article.pathName}, file=${article.fileName})}"
+          	 class="text-info list-group-item" href="detail.html">2020/04/04 Rust语言的编程范式</a>
           <a class="text-info list-group-item" href="detail.html">2020/03/01 与程序员相关的CPU缓存知识</a> 
           <a class="text-info list-group-item" href="detail.html">2020/01/31  MegaEase的远程工作文化</a> 
           <a class="text-info list-group-item" href="detail.html">2019/12/26  使用简单的逻辑方法进行独立思考</a> 
@@ -57,9 +63,11 @@
     </div>
     <div class="col-4">
       <div class="container bg-white mt-5 mb-3 ">
-        <h4 class="font-weight-normal pt-3  mb-3 text-center ">最新文章</h4>
-        <div class="list-group list-group-flush pb-3 " >
-          <a class="list-group-item text-dark" href="category/detail.html">Rust语言的编程范式</a>
+        <h4 class="font-weight-normal pt-3  mb-3 text-center " >最新文章</h4>
+        <div class="list-group list-group-flush pb-3 " th:remove="all-but-first">
+          <a th:each="article: ${dataSource.topArticles}"
+				th:href="@{{path}/{file}(path=${'../' + article.pathName}, file=${article.fileName})}"
+				th:text="${article.metaData.title}"class="list-group-item text-dark" href="category/detail.html">Rust语言的编程范式</a>
           <a class="list-group-item text-dark" href="detail.html">与程序员相关的CPU缓存知识</a>
           <a class="list-group-item text-dark" href="detail.html">MegaEase的远程工作文化</a>
           <a class="list-group-item text-dark" href="detail.html">使用简单的逻辑方法进行独立思考</a>

@@ -1,6 +1,7 @@
 package com;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -70,9 +71,49 @@ public class Creator {
 		createIndexPage(ds);
 		// 4. 生成栏目信息
 		createSubject(ds);
+		// 5. 复制图片
+		copyResourceFile();
 	}
+	private void copyResourceFile() {
+		// 获取数据源中的栏目目录
+		File[] subjectDirs = DataSourceDir.listFiles((f)->f.isDirectory());
+		// 遍历
+		for (File subjectDir : subjectDirs) {
+			// 扫描所有非md文件
+			File[] resources = subjectDir.listFiles((f)->f.isFile()&&!f.getName().endsWith(".md"));
+			
+			// 目标文件夹
+			File descDir = new File(WebappDir, subjectDir.getName().split("_")[0]);
+			// 遍历文件
+			for (File resource : resources) {
+				try (
+					FileInputStream fis = new FileInputStream(resource);
+					FileOutputStream fos = new FileOutputStream(new File(descDir, resource.getName()));
+				) {
+					byte[] data = new byte[10*1024];
+					int len = -1;
+					while ((len = fis.read(data))!=-1) {
+						fos.write(data, 0, len);
+					}
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+	}
+
+
+	/**
+	 * 从数据源中复制图片到 网站目录下
+	 */
+	
 	/**
 	 * 生成栏目信息
+	 * @param ds
+	 */
+	/**
 	 * @param ds
 	 */
 	private void createSubject(DataSource ds) {
@@ -108,11 +149,13 @@ public class Creator {
 		
 		for (Entry<String, List<Article>> entry : entrySet) {
 			String fileName = entry.getKey().split("_")[0];
+			String subjectName = entry.getKey().split("_")[1];
 			File subjectDir = new File(WebappDir, fileName);
 			System.err.println(subjectDir);
 			if (!subjectDir.exists()) {
 				subjectDir.mkdir();
 			}
+			
 			// 生成栏目下的文章
 			List<Article> list = entry.getValue();
 			for (Article article : list) {
@@ -123,9 +166,18 @@ public class Creator {
 				File articleFile = new File(subjectDir, article.getFileName());
 				System.err.println("\t" + articleFile);
 				createHtml("./template/category/detail.html", context, articleFile);
-				
 			}
 			
+			// 生成栏目的首页
+			Context context = new Context();
+			//		栏目名，用于在栏目首页上显示标题。
+			context.setVariable("subjectName", subjectName);
+			//		上方栏目超链接 和 右侧最新15篇文章
+			context.setVariable("dataSource", ds);
+			//		当前栏目所有文章 生成文章列表及超链接
+			context.setVariable("articles", list);
+			File subjectIndex = new File(subjectDir, "index.html");
+			createHtml("./template/category/index.html", context, subjectIndex);
 		}
 		
 		

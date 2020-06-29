@@ -1,6 +1,6 @@
 ---
 title: 苹果发布会！
-author: 张三
+author: 焦世玉
 date: 2020-6-27
 preview: 作为开发者大会，新版本 macOS 11.0 Big Sur 也如约而至。Big Sur 大瑟尔是美国加州一号公路，也是美国西海岸一道非常美丽的风景线。
 ---

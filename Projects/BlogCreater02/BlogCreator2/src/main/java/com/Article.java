@@ -32,6 +32,81 @@ public class Article {
 	private String content;
 	
 	
+	/**
+	 * Getters and Setters
+	 */
+	
+	public String getFileName() {
+		return fileName;
+	}
+
+
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+
+
+	public String getPathName() {
+		return pathName;
+	}
+
+
+
+	public void setPathName(String pathName) {
+		this.pathName = pathName;
+	}
+
+
+
+	public String getSubjectName() {
+		return subjectName;
+	}
+
+
+
+	public void setSubjectName(String subjectName) {
+		this.subjectName = subjectName;
+	}
+
+
+
+	public long getLastModified() {
+		return lastModified;
+	}
+
+
+
+	public void setLastModified(long lastModified) {
+		this.lastModified = lastModified;
+	}
+
+
+
+	public Map<String, String> getMetaData() {
+		return metaData;
+	}
+
+
+
+	public void setMetaData(Map<String, String> metaData) {
+		this.metaData = metaData;
+	}
+
+
+
+	public String getContent() {
+		return content;
+	}
+
+
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	
 	
 	/**
 	 * 将.md解析为.html的解析器, 没啥卵用，直接复制粘贴

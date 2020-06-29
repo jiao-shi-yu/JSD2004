@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>详情页</title>
+  <title th:text="${article.metaData.title}">详情页</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="renderer" content="webkit"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,8 +20,11 @@
 	  传奇的博客
     </a>
    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="navbar-nav mr-auto">
-        <a class="nav-item nav-link" href="./index.html">主页</a>
+      <div class="navbar-nav mr-auto" th:remove="all-but-first">
+        <a th:each="subject: ${dataSource.allSubjectNames}"
+						th:text="${subject.subjectName}"
+						th:href="@{../{path}/index.html(path=${subject.pathName})}"
+        class="nav-item nav-link" href="./index.html">主页</a>
         <a class="nav-item nav-link" href="./index.html">IT</a>
         <a class="nav-item nav-link" href="./index.html">Java</a>
         <a class="nav-item nav-link" href="./index.html">JavaScript</a>
@@ -40,13 +43,13 @@
     <div class="col-8">
       <div class="container bg-white py-2 my-5 mb-3">
 	    <!-- 标题区域 -->
-        <h2 class="font-weight-normal text-center mb-1">RUST语言的编程范式</h2>
+        <h2 th:text="${article.metaData.title}" class="font-weight-normal text-center mb-1">RUST语言的编程范式</h2>
 	    <!-- 元数据 -->
-        <div class="col-12 text-center border-bottom mt-2">
+        <div th:text="${article.metaData.date} + ' ' + ${article.metaData.author}" class="col-12 text-center border-bottom mt-2">
 	  	  2020年06月12日 陈小明
         </div>
         <!--   文章内容    -->
-        <div class="content">
+        <div class="content" th:utext="${article.content}">
 
           <p>总是有很多很多人来问我对Rust语言怎么看的问题，在各种地方被at，其实，我不是很想表达我的想法。因为在不同的角度，你会看到不同的东西。编程语言这个东西，老实说很难评价，在学术上来说，Lisp就是很好的语言，然而在工程使用的时候，你会发现Lisp没什么人用，而Javascript或是PHP这样在学术很糟糕设计的语言反而成了主流，你觉得C++很反人类，在我看来，C++有很多不错的设计，而且对于了解编程语言和编译器的和原理非常有帮助。<strong>但是C++也很危险，所以，出现在像Java或Go 语言来改善它，Rust本质上也是在改善C++的。他们各自都有各自的长处和优势</strong>。</p>
        <p>因为各个语言都有好有不好，因此，我不想用别的语言来说Rust的问题，或是把Rust吹成朵花以打压别的语言，写成这样的文章，是很没有营养的事。<strong>本文主要想通过Rust的语言设计来看看编程中的一些挑战，尤其是Rust重要的一些编程范式，这样反而更有意义一些，因为这样你才可能一通百通</strong>。</p>
@@ -57,8 +60,11 @@
     <div class="col-4">
       <div class="container bg-white mt-5 mb-3 ">
         <h4 class="font-weight-normal pt-3  mb-3 text-center ">最新文章</h4>
-        <div class="list-group list-group-flush pb-3 ">
-          <a class="list-group-item text-dark" href="category/detail.html">Rust语言的编程范式</a>
+        <div class="list-group list-group-flush pb-3 "  th:remove="all-but-first">
+          <a 	th:each="article: ${dataSource.topArticles}"
+				th:href="@{{path}/{file}(path=${'../' + article.pathName}, file=${article.fileName})}"
+				th:text="${article.metaData.title}"
+				class="list-group-item text-dark" href="category/detail.html">Rust语言的编程范式</a>
           <a class="list-group-item text-dark" href="detail.html">与程序员相关的CPU缓存知识</a>
           <a class="list-group-item text-dark" href="detail.html">MegaEase的远程工作文化</a>
           <a class="list-group-item text-dark" href="detail.html">使用简单的逻辑方法进行独立思考</a>

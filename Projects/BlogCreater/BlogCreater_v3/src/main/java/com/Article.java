@@ -94,7 +94,8 @@ public class Article {
 				metaData.put(arr[0], arr[1]);
 			}
 			scanner.close();
-			System.out.println("metaData: " + metaData);
+			System.err.println("\n\t" + "metaData: " + metaData);
+			
 			
 			// 截取出文章内容
 			String contentStr = txt.substring(end + 3);
