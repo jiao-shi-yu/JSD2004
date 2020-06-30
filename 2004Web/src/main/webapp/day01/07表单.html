@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>07表单</title>
+	
+	</head>
+	<body>
+		<form action="http://www.jiaoshy.com" method="get">
+			用户名:<input type="text" name="username" placeholder="请输入用户名" value="张三" readonly>
+			<br>密码:<input type="password" name="password" >
+			<br>
+			<input type="radio" name="gender" id="r1" value="f" /><label for="r1">男</label>
+			<input type="radio" name="gender" id="r2" value="m" /><label for="r2">女</label>
+			<br>
+			爱好：<input type="checkbox" name="hobby" id="cy" value="cy" /><labelfor="cy">抽烟</label>
+			<input type="checkbox" name="hobby" id="hj" value="hj" /><label for="hj">喝酒</label>
+			<input type="checkbox" name="hobby" id="tt" value="tt" /><label for="tt">烫头</label>
+			<br>
+			生日：<input type="date" name="birthday" id="birthday" value="" />
+			<br>
+			靓照: <input type="file" name="pic" id="pic" value="" />
+			<br>
+			自我介绍：<textarea rows="5" cols="20" placeholder="介绍一下自己吧">
+			</textarea>
+			<br>
+			所在城市：
+			<select name="city">
+				<option>请选择</option>
+				<option value ="bj">北京</option>
+				<option value ="sh" selected>上海</option>
+				<option value ="gz">广州</option>
+			</select>
+			<br>
+			<input type="submit" value="注册"/>
+		</form>
+	</body>
+</html>

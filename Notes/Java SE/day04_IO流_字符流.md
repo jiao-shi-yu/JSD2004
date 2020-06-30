@@ -11,6 +11,7 @@ Reader 是字符输入流的父类；Writer 是字符输出流的父类。
 ## Reader 常用方法
 - `int read()`:读取一个字符，将字符的 unicode 编码存到 int 返回值的“低 16 位”。
 - `int read(char[] chs)`：从流中读取数组长度的字符，并将读到的字符存入 `char[]`数组。返回值为 实际读取到的字符量。
+- `int read(char[] chs, int off, int len)`: 读取字符, 存到数组的一部分。
 
 
 ## Writer 常用方法
