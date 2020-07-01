@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/*属性选择器*/
+			input[type="text"] {
+				background-color: plum;
+			}
+/* 			* {
+				border: 1px solid black;
+			} */
+/* 			body div span {
+				color: red;
+			} */
+/* 			body div div span {
+				color: red;
+			} */
+/* 			body div div div span {
+				color: red;
+			} */
+/* 			body>div>span {
+				color: red
+			} */
+/* 			body>div span {
+				color: red;
+			} */
+			body>span {
+				color: red;
+			}
+			a:link {
+				color: royalblue;
+				
+			}
+			a:visited {
+				color: green;
+				text-decoration: none;
+			}
+			a:hover {
+				color: aqua;
+			}
+			a:active {
+				color: blueviolet;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<a href="../imgs/a.jpg">
+			<figure>
+				<img src="../imgs/a.jpg" >
+				<figcaption>小姐姐</figcaption>
+			</figure>
+		</a>
+		<a href="../imgs/b.gif">
+			<figure>
+				<img src="../imgs/b.gif" >
+				<figcaption>雨滴绿叶</figcaption>
+			</figure>
+		</a>
+		<a href="../imgs/e.jpg">
+			<figure>
+				<img src="../imgs/e.jpg" >
+				<figcaption>古风美女</figcaption>
+			</figure>
+		</a>
+		<a href="../imgs/d.gif">
+			<figure>
+				<img src="../imgs/d.gif" >
+				<figcaption>闪耀红花</figcaption>
+			</figure>
+		</a>
+		<span>s1</span>
+		<div>
+			<span>s2</span>
+			<div>
+				<span>
+					s3
+				</span>
+			</div>
+
+			<div>
+				<span>s4</span>
+				<div>
+					<span>s5</span>
+				</div>
+			</div>
+		</div>
+		<input type="text" />
+		<input type="password" />
+	</body>
+</html>
