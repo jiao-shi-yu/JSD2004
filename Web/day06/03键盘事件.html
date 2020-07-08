@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<input type="text" id="input1"
+		onkeydown="keydown()"
+		onkeyup="keyup()"
+		>
+		<div id="div1">
+			
+		</div>
+		<div id="div2">
+			
+		</div>
+		<script type="text/javascript">
+			function keydown(){
+				div1.innerText = "键按下： " +event.keyCode;
+			}
+				
+			function keyup(){
+				var c = String.fromCharCode(event.keyCode);
+				div2.innerText = "键抬起： " + c;
+			}
+		</script>
+	</body>
+</html>

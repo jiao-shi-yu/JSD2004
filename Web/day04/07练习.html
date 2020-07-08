@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				font: 12px "simhei", Arial, Helvetica, sans-serif;
+				color: #666;
+			}
+			body>div{
+				width: 366px;
+				height: 233px;
+				background-color: #e8e8e8;
+			}
+			#top_div{
+				height: 35px;
+				background-color: #0AA1ED;
+				border-radius: 2px;
+			}
+			#top_div>img{
+				margin: 8px 0 0 10px; 
+			}
+			#top_div>span{
+				color: white;
+				font-size: 16px;
+				/* 如果需要对页面中的某一个元素进行位置微调使用相对定位 */
+				position: relative;
+				bottom: 4px;
+			}
+			.c1{
+				padding-left: 10px;
+			}
+			.c1>p{
+				color: #62B5EC;
+			}
+			ul{
+				list-style-type: none;
+				overflow: hidden;
+				/* 去掉ul自带的缩进效果 */
+				padding-left: 0;
+			}
+			li{
+				/* 如果ul里面的所有li全都浮动,则自动识别高度为0,会出现显示异常
+				 在ul添加overflow:hidden解决*/
+				float: left;
+				margin-right: 10px;
+			}
+			li>a{
+				color: #0AA1ED;
+				text-decoration: none;
+			}
+			
+		</style> 
+	</head>
+	<body>
+		<div>
+			<div id="top_div">
+				<img src="http://doc.canglaoshi.org/tstore_v1/images/itemCat/computer_icon1.png" >
+				<span>电脑,办公/1F</span>
+			</div>
+			<div class="c1">
+				<p>电脑整机</p>
+				<ul>
+					<li><a href="#">笔记本</a></li>
+					<li><a href="#">游戏机</a></li>
+					<li><a href="#">台式机</a></li>
+					<li><a href="#">一体机</a></li>
+					<li><a href="#">服务器</a></li>
+					<li><a href="#">联想</a></li>
+				</ul>
+			</div>
+			<div class="c1">
+				<p>电脑配件</p>
+				<ul>
+					<li><a href="#">CPU</a></li>
+					<li><a href="#">SSD硬盘</a></li>
+					<li><a href="#">显示器</a></li>
+					<li><a href="#">显卡</a></li>
+					<li><a href="#">组装电脑</a></li>
+					<li><a href="#">机箱</a></li>
+				</ul>
+			</div>
+			<div class="c1">
+				<p>外设/游戏</p>
+				<ul>
+					<li><a href="#">键盘</a></li>
+					<li><a href="#">鼠标</a></li>
+					<li><a href="#">U盘</a></li>
+					<li><a href="#">移动硬盘</a></li>
+					<li><a href="#">游戏设备</a></li>
+					<li><a href="#">智能单车</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

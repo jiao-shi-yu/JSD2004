@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="num" id="numInput" value="" />
+		<input type="button" name="button" id="button" value="计算平方"
+			onclick="myfunc()"/>
+		<div id="answerDiv">
+			
+		</div>
+		<script type="text/javascript">
+			function myfunc() {
+				let numInput = document.getElementById("numInput");
+				let div = document.getElementById("answerDiv");
+				let num = numInput.value;
+				if (isNaN(num)){
+					div.innerText("输入有误");
+				} else {
+					let square = num * num;
+					div.innerText = square;
+				}
+			}
+		</script>
+	</body>
+</html>

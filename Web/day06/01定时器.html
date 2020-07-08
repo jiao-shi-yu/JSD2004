@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				font-size: 200px;
+				width: 400px;
+				height: 400px;
+				margin: 0 auto;
+				line-height: 400px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			0
+		</div>
+
+		<script type="text/javascript">
+			// 声明一个变量，用来计时
+			var i = 1;
+			// 声明一个方法，被计时器调用
+			function f1(){
+				div1.innerText=i++;
+				
+				if (i>12)  {
+					// clearInterval
+					clearInterval(timer);
+				}
+					
+			}
+			// 声明一个计时器
+			var timer = setInterval(f1, 1000);
+			
+			setTimeout(function(){
+				div1.innerText="时间到！";
+			}, 13000);
+			
+		</script>
+	</body>
+</html>

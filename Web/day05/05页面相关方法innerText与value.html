@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="d1">
+			abc
+		</div>
+		<input type="text" id="i1">
+		<input type="button" value="按钮" onclick="myfunc()">
+		<input type="button" value="文本框" onclick="myfunc2()">
+		<script type="text/javascript">
+			function myfunc(){
+				
+				// 通过id获取元素对象
+				var d = document.getElementById("d1");
+				// 设置元素的innerText
+				d.innerText="张飞";
+				// 获取元素的文本
+				alert(d.innerText);
+			}
+			function myfunc2() {
+				// 通过id获取元素对象
+				var t = document.getElementById("i1");
+				// 设置值
+				t.value = "吼吼吼";
+				// 获取值
+				alert(t.value);
+			}
+		</script>
+	</body>
+</html>

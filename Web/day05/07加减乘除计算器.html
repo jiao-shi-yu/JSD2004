@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="number" name="number1" id="input1" value="" />
+		<input type="number" name="number2" id="input2" value="" />
+		<input type="button" value="+" onclick="calc(1)">
+		<input type="button" value="-" onclick="calc(2)">
+		<input type="button" value="*" onclick="calc(3)">
+		<input type="button" value="/" onclick="calc(4)">
+		<div id="div"></div>
+		<script type="text/javascript">
+			function calc(x) {
+				/* if (isNaN(input1.value) || isNaN(input2.value)) {
+					div.innerText = "输入错误";
+					return;
+				} */
+				let result;
+				switch (x) {
+					case 1: 
+					 result = input1.value*1 + input2.value*1;
+					 break;
+					case 2: 
+					 result = input1.value - input2.value;
+					 break;
+					case 3: 
+					 result = input1.value * input2.value;
+					 break;
+					case 4: 
+					 result = input1.value / input2.value;
+					 break;
+				}
+				let div = document.getElementById("div");
+				div.innerText = result;
+			}
+		</script>
+	</body>
+</html>

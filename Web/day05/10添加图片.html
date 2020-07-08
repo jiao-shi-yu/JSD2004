@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="input" placeholder="个数">
+		<input type="button" value="可爱" onclick="f1()">
+		<input type="button" value="清新" onclick="f2()">
+		<div id="div1">
+			
+		</div>
+		<script type="text/javascript">
+			function f1() {
+				for (var i = 0; i < input.value; i++){
+					div1.innerHTML += "<img src='../imgs/a.jpg'>";
+				}
+			}
+			function f2() {
+				for (var i = 0; i < input.value; i++){
+					div1.innerHTML += "<img src='../imgs/e.jpg'>";
+				}
+			}
+		</script>
+	</body>
+</html>

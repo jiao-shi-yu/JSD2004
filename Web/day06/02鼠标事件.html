@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				font-size: 200px;
+				width: 1200px;
+				height: 400px;
+				margin: 0 auto;
+				line-height: 400px;
+				text-align: center;
+				border: 2px solid black;
+				border-radius: 2px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1" 
+		onmouseover="mouseover()"
+		onmouseout="mouseout()"
+		onmousedown="mousedown()"
+		onmouseup="mouseup()"
+		onmousemove="mousemove()"
+		onmousewheel="mousewheel()"
+		>
+			
+		</div>
+
+		<script type="text/javascript">
+		
+			function mouseover() {
+				div1.innerText = "鼠标悬停";
+			}
+			function mouseout() {
+				div1.innerText = "鼠标移出";
+			}
+			function mousedown() {
+				div1.innerText = "鼠标按下";
+			}
+			function mouseup() {
+				div1.innerHTML = "鼠标抬起";
+			}
+			function mousemove() {
+				div1.innerText = "鼠标移动";
+			}
+		</script>
+	</body>
+</html>
