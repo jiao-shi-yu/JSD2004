@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>07省市联动练习</title>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+		
+	</head>
+	<body>
+		<select>
+			<option>请选择</option>
+			<option value="0">河北</option>
+			<option value="1">山东</option>
+			<option value="2">北京</option>
+		</select>
+		<select>
+			<option>请选择</option>
+		</select>
+		<script type="text/javascript"
+			src="../js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript">
+			var arr = [["秦皇岛","唐山","石家庄"],
+				["青岛","烟台","淄博"],
+				["朝阳","海淀","大兴"]];       
+			//给第一个下拉选添加值改变事件
+			$("select:first").change(function() {
+				$("select:last").html("<option>请选择</option>");
+				var cities = arr[this.value];
+				for (var i=0; i < cities.length; i++) {
+					var name = cities[i];
+					var opt = $("<option></option>");
+					opt.text(name);
+					$("select:last").append(opt);
+				}
+			});
+		</script>
+	</body>
+</html>

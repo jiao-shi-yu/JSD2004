@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			div {
+				font-size: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>div1</div>
+		<div>div2</div>
+		<div>div3</div>
+		<script type="text/javascript">
+			$("div").hover(function(){
+				$(this).css("color", "red");
+			}, function(){
+				$(this).css("color", "green");
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+		
+	</head>
+	<body>
+		<input type="checkbox" name="" id="" value="" />
+		<input type="button" name="" id="" value="按钮" />
+		<!-- ctrl + enter -->
+		<script type="text/javascript">
+			$("input:last").click(function() {
+				//$("input:first").attr("checked", "checked");
+				$("input:first").attr("checked", !$("input:first").attr("checked"));
+			});
+		</script>
+	</body>
+</html>

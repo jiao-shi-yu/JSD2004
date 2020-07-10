@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+		
+	</head>
+	<body>
+		<input type="button" name="" id="" value="按钮" />
+			<script type="text/javascript">
+				var x = 10;
+				$("input").click(function(){
+					for(var i = 0; i < 3; i++) {
+						var btn = $("<input type='button'>");
+						// let btn = $("<input type='button'>");
+						btn.val(i);
+						btn.click(function(){
+							$(this).remove();
+						});
+						$("body").append(btn);
+					};
+					// 与Java不同：JS循环外部，是可以访问变量i的。
+					alert(i);
+				});
+			</script>
+	</body>
+</html>

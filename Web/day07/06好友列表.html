@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+		
+	</head>
+	<body>
+		<ul>
+			<li>亲戚
+				<ul>
+					<li>习大大</li>
+					<li>老干妈</li>
+					<li>马大姐</li>
+				</ul>
+			</li>
+			<li>同事
+				<ul>
+					<li>马云</li>
+					<li>马化腾</li>
+					<li>任正非</li>
+				</ul>
+			</li>
+			<li>女友们
+				<ul>
+					<li>貂蝉</li>
+					<li>西施</li>
+					<li>孙尚香</li>
+				</ul>
+			</li>
+		</ul>
+		<script type="text/javascript">
+			$("li>ul").hide();
+			// 一级li添加事件
+			$('body>ul>li').click(function() {
+				$(this).children().toggle();
+				$(this).siblings().children().hide();
+			});
+		</script>
+	</body>
+</html>

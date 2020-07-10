@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+		
+	</head>
+	<body>
+		<input type="text">
+		<input type="button" value="最前面" />
+		<input type="button" value="最后面" />
+		<input type="button" value="上海前" />
+		<input type="button" value="上海后" />
+		<input type="button" value="删除上海" />
+		<hr>
+		<ul>
+			<li>北京</li>
+			<li>上海</li>
+			<li>广州</li>
+		</ul>
+		性别：<input type="radio" name="gender">男
+		<input type="radio" name="gender">女
+		<script type="text/javascript">
+			setTimeout(function(){
+				$("input:last").attr("checked", "checked");
+			}, 3000);
+			// 给第一个按钮添加点击事件
+			$("input:eq(1)").click(function(){
+				var li = $("<li></li>");
+				// 设置li的文本内容
+				li.text($("input:first").val());
+				$("ul").prepend(li);
+			});
+			// 给第二个按钮添加点击事件
+			$("input:eq(2)").click(function(){
+				var li = $("<li></li>");
+				// 设置li的文本内容
+				li.text($("input:first").val());
+				$("ul").append(li);
+			});
+			// 给第三个按钮添加点击事件
+			$("input:eq(3)").click(function(){
+				var li = $("<li></li>");
+				// 设置li的文本内容
+				li.text($("input:first").val());
+				$("li:contains('上海')").before(li);
+			});
+			// 给第四个按钮添加点击事件
+			$("input:eq(4)").click(function(){
+				var li = $("<li></li>");
+				// 设置li的文本内容
+				li.text($("input:first").val());
+				$("li:contains('上海')").after(li);
+			});
+			// 给第五个按钮添加点击事件
+			$("input:eq(5)").click(function(){
+				$("li:contains('上海')").remove();
+			});
+			
+			
+		</script>
+	</body>
+</html>

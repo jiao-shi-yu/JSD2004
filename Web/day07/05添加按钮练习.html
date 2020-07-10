@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+		
+	</head>
+	<body>
+		<script>
+			// 给页面添加100个按钮，每个按钮显示它是第几个按钮。点击按钮时，会消失。
+			for (var i = 0; i <= 100; i ++) {
+				// 创建按钮元素
+				var b = $("<input type='button'>");
+				// 修改按钮的显示内容
+				b.attr("value", '按钮' + i);
+				// 给按钮添加点击事件
+				b.click(function() {
+					// this是触发事件的元素
+					$(this).remove();
+				});
+				$('body').append(b);
+			}
+			
+		</script>
+	</body>
+</html>

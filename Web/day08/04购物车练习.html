@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.4.1.min.js">
+			
+		</script>
+	</head>
+	<body>
+		<h3>购物车</h3>
+		
+		<input type="checkbox" value="80" />键盘80元<br>
+		<input type="checkbox" value="20" />鼠标20元<br>
+		<input type="checkbox" value="5000" />华为手机5000元<br>
+		<input type="checkbox" value="3000" />小米电视3000元<br>
+		
+		<input type="checkbox" id="quanxuan" />全选<br>
+		<p>总价: 0元</p>
+		
+		<!-- ctrl + enter -->
+		<script type="text/javascript">
+			
+			$("input").click(function(){
+				// alert($("input:eq(0)").prop("checked"));
+				// alert($("input:eq(1)").prop("checked"));
+				// alert($("input:eq(2)").prop("checked"));
+				// alert($("input:eq(3)").prop("checked"));
+					
+				if (this.id == "quanxuan") {
+					let status = $(this).prop("checked");
+					if (status) {
+						$("input:not(#quanxuan)").prop("checked", status);
+					} else {
+						$("input:not(#quanxuan)").prop("checked", status);
+					}
+				}
+				var price = 0;
+				$("input:not(#quanxuan)").each(function() {
+					if ($(this).prop("checked")) {
+						price += $(this).val() * 1;
+					}
+				});
+				$("p").text("总价: " + price + "元");
+				// alert($("input:eq(0)").prop("checked"));
+				// alert($("input:eq(1)").prop("checked"));
+				// alert($("input:eq(2)").prop("checked"));
+				// alert($("input:eq(3)").prop("checked"));
+				
+			});
+		</script>
+		
+	</body>
+</html>

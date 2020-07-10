@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+	</head>
+	<body>
+		<div>aaa</div>
+		<div>bbb</div>
+		<div>ccc</div>
+		<input type="button" value="body后面添加一个h3" onclick="bodyappendh3()">
+		<input type="button" value="body前面添加一个h3" onclick="bodyprependh3()">
+		<input type="button" value="body前面添加另外一个h3" onclick="bodyprependh32()">
+		<hr >
+		<input type="button" value="包含bbb的div前,添加一个h3" onclick="divcontainsbbbbefore()">
+		<input type="button" value="包含bbb的div后,添加一个h3" onclick="divcontainsbbbafter()">
+		<hr />
+		<input type="button" value="删除bbb" onclick="divcontainsbbbremove()">
+		<script type="text/javascript">
+			var h3 = $("<h3>我是一个三级标题</h3>");
+			var h32 = $("<h3>我也是一个三级标题</h3>");
+			// 获取包含bbb的div
+			var bbbdiv = $("div:contains('bbb')");
+			
+			function bodyappendh3(){
+				$("body").append(h3);
+			}
+			function bodyprependh3() {
+				$("body").prepend(h3);
+			}
+			function bodyprependh32() {
+				$("body").prepend(h32);
+			}
+			
+			function divcontainsbbbbefore() {
+				bbbdiv.before(h3);
+			}
+			function divcontainsbbbafter() {
+				bbbdiv.after(h3);
+			}
+			function divcontainsbbbremove() {
+				bbbdiv.remove();
+			}
+		</script>
+	</body>
+</html>

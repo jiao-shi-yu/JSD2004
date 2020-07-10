@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			body {
+				margin: 0;
+				background-image: url(bg1.jpg);
+				overflow: hidden;
+			}
+			img {
+				width: 100px;
+				height: 100px;
+				position: absolute;
+			}
+			#s {
+				float: left;
+			}
+			#f {
+				float: right;
+			}
+			h3 {
+				color: white;
+				font-size: 60px;
+				z-index: 10;
+			}
+			#succeed {
+				font-size: 100px;
+				color: greenyellow;
+			}
+			#failed {
+				font-size: 100px;
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h3 id="s">消灭僵尸数: <span id="succeed"></span></h3>
+		<h3 id="f">跑掉僵尸数: <span id="failed"></span></h3>
+		<script type="text/javascript">
+			// onload = function() {
+				var w = $(window).width();
+				var h = $(window).height();
+				$("body").css("background-size", w + "px " + h + "px");
+				
+			// }
+			
+			var scount = 0;
+			var fcount = 0;
+			onresize = function() {
+				var w = $(window).width();
+				var h = $(window).height();
+				$("body").css("background-size", w + "px " + h + "px");
+				
+			}
+			// 生成
+			setInterval(function() {
+				let type = parseInt(scount/20);
+				type = type>3?3:type;
+				var img = $("<img src='zomb"+ type +".png'>");
+				let left = w;
+				let top = parseInt(Math.random()*(h-50));
+				img.attr("hp", type+1);
+				
+				img.css({"left":left +"px","top":top+"px"});
+				
+				img.mouseover(function(){
+					let hp = $(this).attr("hp");
+					hp--;
+					$(this).attr("hp", hp);
+					
+					
+					if (hp<=0){
+						$(this).remove();
+						$("#succeed").text(++scount);
+					}
+					
+				});
+				$("body").append(img);
+			}, 1000);
+			
+			// 移动
+			setInterval(function() {
+				$("img").each(function(){
+					let left = parseInt($(this).css("left"));
+					left -= 2;
+					if (left<=100) {
+						$(this).remove();
+						$("#failed").text(++fcount);
+						if (fcount>=10) {
+							alert("游戏结束");
+							location.reload();
+						}
+					}
+					$(this).css("left", left+"px");
+					
+				});
+			}, 10);
+			
+		</script>
+	</body>
+</html>

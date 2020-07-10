@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+		
+	</head>
+	<style type="text/css">
+		p {
+			padding-left: 60px;
+		}
+		img {
+			width: 300px;
+			height: 300px;
+		}
+		.selected {
+			color: red;
+			border-bottom: 2px solid red;
+			text-decoration: none;
+		}
+		.normal {
+			color: black;
+			border: none;
+			text-decoration: none;
+		}
+	</style>
+	<body>
+		<p>
+			<a class="selected" href="#">肤白</a>
+			<a class="normal" href="#">貌美</a>
+		</p>
+		<div>
+			<img src="../imgs/a.jpg" >
+			<img src="../imgs/e.jpg" >
+		</div>
+		<script type="text/javascript">
+			$("a").click(function(){
+				$(this).attr("class", "selected").siblings().attr("class", "normal");
+				// 处理图片显示
+				// 判断点击的是哪一个，根据点击的超链接，决定图片显示状态
+				var str = $(this).text()=="肤白"?"first":"last";
+				$("img:"+str).show().siblings().hide();
+			});
+			
+			// 页面加载时让美女隐藏
+			$("img:last").hide();
+		</script>
+	</body>
+</html>
