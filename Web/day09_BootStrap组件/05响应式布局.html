@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bootstrap Template</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+<style type="text/css">
+	/* 手机 小于768*/
+	@media (max-width: 768px) {  
+		body{
+			background-color: red;
+		}
+		h1{
+			color: green;
+		}
+		img{
+			width: 200px;
+		}
+	}
+	/* pad 768-992*/
+	@media (min-width: 768px) and (max-width: 992px) { 
+		body{
+			background-color: yellow;
+		}
+		h1{
+			color: blue;
+		}
+		img{
+			width: 400px;
+		}
+	}
+	/* 桌面显示器 992-1200*/
+	@media (min-width: 992px) and (max-width: 1200px) { 
+		body{
+			background-color: blue;
+		}
+		h1{
+			color: yellow;
+		}
+		img{
+			width: 800px;
+		}
+	}
+	/* 大显示器 大于1200*/
+	@media (min-width: 1200px) { 
+		body{
+			background-color: green;
+		}
+		h1{
+			color: red;
+		}
+		img{
+			width: 1200px;
+		}
+	}
+</style>
+</head>
+<body>
+	<!-- 练习:文字手机绿 pad蓝 桌面显示器黄 大显示红 -->
+	<!-- 练习:图片手机200宽 pad400宽 桌面显示器800宽 大显示1200宽 -->
+  <h1>响应式布局测试</h1>
+  <img src="../imgs/1.jpg" >
+</body>
+<script type="text/javascript" src="../bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+</html>

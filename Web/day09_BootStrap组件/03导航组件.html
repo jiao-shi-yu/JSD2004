@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bootstrap Template</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+</head>
+<body>
+  <ul class="nav nav-tabs">
+    <li role="presentation"><a href="#">首页</a></li>
+    <li role="presentation" class="active"><a href="#">个人信息</a></li>
+    <li role="presentation"><a href="#">消息列表</a></li>
+  </ul>
+  <ul class="nav nav-pills">
+    <li role="presentation" class="active"><a href="#">中国</a></li>
+    <li role="presentation"><a href="#">美国</a></li>
+    <li role="presentation"><a href="#">俄罗斯</a></li>
+  </ul>
+  
+  <ul class="nav nav-tabs">
+   
+    <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        魏国 <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="#">曹操</a></li>
+        <li><a href="#">司马懿</a></li>
+        <li><a href="#">曹丕</a></li>
+      </ul>
+    </li>
+	<li role="presentation" class="dropdown">
+	  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+	    蜀国 <span class="caret"></span>
+	  </a>
+	  <ul class="dropdown-menu">
+	    <li><a href="#">刘备</a></li>
+	    <li><a href="#">诸葛亮</a></li>
+	    <li><a href="#">赵云</a></li>
+	  </ul>
+	</li>
+	<li role="presentation" class="dropdown">
+	  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+	    吴国 <span class="caret"></span>
+	  </a>
+	  <ul class="dropdown-menu">
+	    <li><a href="#">周瑜</a></li>
+	    <li><a href="#">大乔</a></li>
+	    <li><a href="#">小乔</a></li>
+	  </ul>
+	</li>
+  </ul>
+  <h3>水平对齐方式</h3>
+  <div>测试文本1</div>
+  <div class="text-center">测试文本2</div>
+  <div class="text-right">测试文本3</div>
+  
+</body>
+<script type="text/javascript" src="../bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+<script type="text/javascript">
+	//给所有li添加点击事件
+	$("li").click(function(){
+		//给当前点击的li添加属性
+		$(this).attr("class","active");
+		//让其它li取消选中
+		$(this).siblings().attr("class","");
+	})
+</script>
+</html>
