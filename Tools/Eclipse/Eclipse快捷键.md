@@ -1,6 +1,8 @@
 # 运行代码
 `cmd + opt + X, J`: Run as Java Application
 
+`cmd + opt + X, T` : Run as JUnit Test.
+
 # 代码补全
 sout + opt
 systrace + opt

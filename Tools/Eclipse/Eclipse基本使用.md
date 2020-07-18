@@ -1,3 +1,9 @@
+## 自定义代码块
+
+window -->preferences -->java -->Editor -->Templates -->new
+
+
+
 ## 设置模板代码
 
 Preference -> Web -> JSP Files -> Editor -> Templates
