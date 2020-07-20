@@ -3,7 +3,12 @@ package com.jiaoshy;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.util.Scanner;
-
+/**
+ * 准备一张users表
+ * CREATE　TABLE users(id INT PRIMARY KEY, username VARCHAR(10), password VARCHAR(10));
+ * @author jiao_
+ *
+ */
 public class Demo3 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
