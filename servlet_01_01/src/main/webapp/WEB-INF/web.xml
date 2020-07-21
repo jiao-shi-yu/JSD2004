@@ -19,4 +19,44 @@
     <servlet-name>HelloServlet</servlet-name>
     <url-pattern>/HelloServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MethodServlet</display-name>
+    <servlet-name>MethodServlet</servlet-name>
+    <servlet-class>com.jiaoshy.MethodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MethodServlet</servlet-name>
+    <url-pattern>/MethodServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SayHelloServlet</display-name>
+    <servlet-name>SayHelloServlet</servlet-name>
+    <servlet-class>com.jiaoshy.SayHelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SayHelloServlet</servlet-name>
+    <url-pattern>/SayHelloServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddServlet</display-name>
+    <servlet-name>AddServlet</servlet-name>
+    <servlet-class>com.jiaoshy.AddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddServlet</servlet-name>
+    <url-pattern>/AddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BMIServlet</display-name>
+    <servlet-name>BMIServlet</servlet-name>
+    <servlet-class>com.jiaoshy.BMIServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BMIServlet</servlet-name>
+    <url-pattern>/BMIServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
