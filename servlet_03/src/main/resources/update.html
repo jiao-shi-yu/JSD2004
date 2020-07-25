@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>修改英雄信息</title>
+</head>
+<body>
+	<form action="UpdateServlet">
+		<input th:value="${hero.id}" type="text" name="id" readonly="readonly">
+		<input th:value="${hero.heroName}" type="text" name="heroName" placeholder="英雄名称">
+		<input th:value="${hero.heroType}" type="text" name="heroType" placeholder="英雄类型">
+		<input th:value="${hero.heroPrice}" type="text" name="heroPrice" placeholder="英雄价格">
+		<input type="submit" value="确认修改">
+	</form>
+</body>
+</html>

@@ -59,4 +59,14 @@
     <servlet-name>BMIServlet</servlet-name>
     <url-pattern>/BMIServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AIServlet</display-name>
+    <servlet-name>AIServlet</servlet-name>
+    <servlet-class>com.jiaoshy.AIServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AIServlet</servlet-name>
+    <url-pattern>/AIServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

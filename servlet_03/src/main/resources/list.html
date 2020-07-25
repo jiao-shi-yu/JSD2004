@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>所有英雄列表</title>
+</head>
+<body>
+	<table border="1">
+		<tr> 
+			<th>id</th><th>名字</th>
+			<th>类型</th><th>价格</th><th>操作</th>
+		</tr>
+		<!-- th:each 类似java中的foreach   ${list}取出Context容器中的list集合
+		hero代表遍历的每一个英雄对象 -->
+		<tr th:each="hero:${list}" >
+			<!-- th:text替换标签的文本内容 -->
+			<td th:text="${hero.id}"></td>
+			<td><a th:href="'ShowUpdateServlet?id='+${hero.id}"
+			  th:text=${hero.heroName}></a></td>
+			<td th:text=${hero.heroType}></td>
+			<td th:text=${hero.heroPrice}></td>
+			<td><a th:href="'DeleteServlet?id='+${hero.id}">删除</a></td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
+
