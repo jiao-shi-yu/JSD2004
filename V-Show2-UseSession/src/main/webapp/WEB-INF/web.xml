@@ -49,4 +49,24 @@
     <servlet-name>LogOutServlet</servlet-name>
     <url-pattern>/LogOutServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ShowSendServlet</display-name>
+    <servlet-name>ShowSendServlet</servlet-name>
+    <servlet-class>com.jiaoshy.controller.ShowSendServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowSendServlet</servlet-name>
+    <url-pattern>/ShowSendServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SendServlet</display-name>
+    <servlet-name>SendServlet</servlet-name>
+    <servlet-class>com.jiaoshy.controller.SendServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SendServlet</servlet-name>
+    <url-pattern>/SendServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

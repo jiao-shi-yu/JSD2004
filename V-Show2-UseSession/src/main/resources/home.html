@@ -83,7 +83,7 @@ body {
 					<li th:if="${user}!=null"><a href="#"
 						class="fa fa-user-circle-o">轮播图</a>
 					<li>
-					<li th:if="${user}!=null"><a href="#"
+					<li th:if="${user}!=null"><a href="ShowSendServlet"
 						class="fa fa-user-circle-o">发布作品</a>
 					<li>
 					<li th:if="${user}!=null"><a href="LogOutServlet"
@@ -134,6 +134,6 @@ body {
 <script type="text/javascript" src="bootstrap3/js/css3-mediaqueries.js"></script>
 <script type="text/javascript" src="bootstrap3/js/respond.min.js"></script>
 <script type="text/javascript">
-	$(".banner_item").eq(0).attr("class", "item active")
+	$(".banner_item").eq(0).attr("class", "item active");
 </script>
 </html>
