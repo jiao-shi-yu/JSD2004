@@ -7,6 +7,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.jiaoshy.dao.UserDAO;
 import com.jiaoshy.entity.User;
@@ -28,16 +29,25 @@ public class LoginServlet extends HttpServlet {
 		// UserDao从数据库中查询数据
 		UserDAO userDAO = new UserDAO();
 		User user = userDAO.findByUsernameAndPassword(username, password);
-		
+		System.out.println(user);
 		// 业务判断
 		if (user==null) {
 			// 登陆失败，重新登录
 			response.sendRedirect(request.getContextPath() + "/ShowLoginServlet");
 		} else {
+			// 登陆成功
+			// 获得HttpSession
+			HttpSession session = request.getSession();
+			System.out.println(session.getId());
+			// 把登录成功的对象保存到session中。
+			session.setAttribute("user", user);
 			
+			
+			// 是否记住
 			String remember = request.getParameter("remember");
 			System.out.println("\t" + remember);
 			if (remember!=null) {
+				
 				// 使用Cookie保存用户名密码
 				System.out.println("使用Cookie");
 				Cookie cookie1 = new Cookie("username", username);
@@ -47,6 +57,7 @@ public class LoginServlet extends HttpServlet {
 				
 				response.addCookie(cookie1);
 				response.addCookie(cookie2);
+								
 				
 			}
 			

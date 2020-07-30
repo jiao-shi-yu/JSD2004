@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="favicon.ico">
+
+<meta charset="UTF-8">
+<title>HOME</title>
+<meta name="viewport"
+  content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css"
+  href="bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css"
+  href="bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+      <style type="text/css">
+		body {
+			background-color: #2e2e2e;
+			padding-top: 20px;
+		}
+		.navbar {
+			background-color: black;
+			border: none;
+		}
+		#logo {
+			position: relative;
+			top: -12px;
+		}
+		
+		.nav.navbar-nav>li>a:hover{
+	  		color: #ffc600;
+	  	}
+    </style>
+</head>
+<body>
+  
+  <header class="container">
+  	<nav class="navbar navbar-default">
+  		<div class="container-fluid">
+  			<div class="navbar-header">
+  				<a class="navbar-brand" href="#">
+  					<img id="logo" alt="商标" src="images/logo.png">
+  				</a>
+  			</div>
+  			<ul class="nav navbar-nav">
+  				<li><a href="HomeServlet">首页</a></li>
+  				<li th:each="category:${categoryList}"><a href="#" th:text="${category.name}">首页</a></li>
+  			</ul>
+  		</div>
+  	</nav>
+  </header>
+  
+</body>
+<script type="text/javascript" src="bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="bootstrap3/js/respond.min.js"></script>
+
+</html>

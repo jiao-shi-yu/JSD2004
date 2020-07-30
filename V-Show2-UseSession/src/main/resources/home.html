@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="favicon.ico">
+
+<meta charset="UTF-8">
+<title>HOME</title>
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css"
+	href="bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css"
+	href="bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+<style type="text/css">
+body {
+	background-color: #2e2e2e;
+	padding-top: 20px;
+}
+
+.navbar {
+	background-color: black;
+	border: none;
+}
+
+#logo {
+	position: relative;
+	top: -12px;
+}
+
+.nav.navbar-nav>li>a:hover {
+	color: #ffc600;
+}
+
+#search>input {
+	border-radius: 30px;
+	border: none;
+	height: 30px;
+	padding: 10px 20px;
+	background-color: #383838;
+	position: relative;
+	top: 10px;
+	outline: none;
+	color: #A9A8A8;
+}
+
+#search>button {
+	background-color: rgba(0, 0, 0, 0);
+	color: gray;
+	border: none;
+	position: relative;
+	top: 13px;
+	left: -40px;
+}
+</style>
+</head>
+<body>
+
+	<header class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#"> <img id="logo" alt="商标"
+						src="images/logo.png">
+					</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="HomeServlet">首页</a></li>
+					<li th:each="category:${categoryList}"><a href="#"
+						th:text="${category.name}">首页</a></li>
+
+					<li>
+						<form action="#">
+							<div id="search">
+								<input type="text" placeholder="搜索" name="keyword">
+								<button type="submit" class="glyphicon glyphicon-search"></button>
+							</div>
+						</form>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li th:if="${user}!=null"><a href="#"
+						class="fa fa-user-circle-o">轮播图</a>
+					<li>
+					<li th:if="${user}!=null"><a href="#"
+						class="fa fa-user-circle-o">发布作品</a>
+					<li>
+					<li th:if="${user}!=null"><a href="LogOutServlet"
+						class="fa fa-user-circle-o">登出</a>
+					<li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<!-- 主体区域  -->
+	<section>
+		<!-- 轮播图 -->
+		<div class="container">
+			<div id="myCarousel" class="carousel slide">
+				<!-- 轮播（Carousel）指标 -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+				<!-- 轮播（Carousel）项目 -->
+				<div class="carousel-inner">
+					<div th:each="b:${banners}" class="item banner_item">
+						<img th:src=${b.imgPath} alt="First slide">
+						<div class="carousel-caption"></div>
+					</div>
+				</div>
+				<!-- 轮播（Carousel）导航 -->
+				<a class="left carousel-control" href="#myCarousel" role="button"
+					data-slide="prev"> <span
+					class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a> <a class="right carousel-control" href="#myCarousel" role="button"
+					data-slide="next"> <span
+					class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+
+		</div>
+	</section>
+</body>
+<script type="text/javascript" src="bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="bootstrap3/js/respond.min.js"></script>
+<script type="text/javascript">
+	$(".banner_item").eq(0).attr("class", "item active")
+</script>
+</html>
