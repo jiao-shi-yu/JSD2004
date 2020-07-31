@@ -10,7 +10,7 @@ import com.jiaoshy.util.DBUtils;
 public class UserDAO {
 	public User findByUsernameAndPassword(String username, String password) {
 		try (Connection conn = DBUtils.getConnection()) {
-			String sql = "SELECT id FROM user WHERE username=? AND password=?";
+			String sql = "SELECT id FROM users WHERE username=? AND password=?";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, username);
 			ps.setString(2, password);
