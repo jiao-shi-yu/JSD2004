@@ -37,10 +37,8 @@ public class ShowLoginServlet extends HttpServlet {
 				}
 			}
 		}
-
 		
 		ThymeleafUtils.print("login.html", context, response);
-		
 		
 	}
 
