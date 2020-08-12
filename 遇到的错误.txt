@@ -1,8 +1,12 @@
-maven plugin
+﻿maven plugin
 
 druid data source allow auto 
 
 part.getHerder().substring()
 
 idea中使用tomcat 控制台中出现 淇℃伅 乱码 
-解决：Tomcat路径/conf/logging.properties 把其中的gbk替换成utf-8
+解决：Tomcat路径/conf/logging.properties 把其中的gbk替换成utf-8bu
+
+
+lombok version
+1.18.12 不是 1.8.12
